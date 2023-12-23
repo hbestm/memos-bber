@@ -1,0 +1,43 @@
+{
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "default_locale": "zh_CN",
+   "version": "2023.09.19",
+   "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+         "128": "assets/logo.png",
+         "48": "assets/logo.png",
+         "16": "assets/logo.png"
+      },
+      "default_title": "__MSG_actionTitle__"
+   },
+   "description": "__MSG_extDescription__",
+   "homepage_url": {
+      "urls": ["https://immmmm.com"]
+   },
+   "icons": {
+      "128": "assets/logo.png",
+      "48": "assets/logo.png",
+      "16": "assets/logo.png"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "permissions": [
+      "tabs",
+      "storage",
+      "activeTab",
+      "contextMenus"
+   ],
+   "host_permissions": ["http://*/*", "https://*/*"],
+   "commands": {
+      "open-extension": {
+         "description": "Open my extension",
+         "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+         }
+      }
+   }
+}
